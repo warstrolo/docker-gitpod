@@ -7,3 +7,4 @@ RUN echo 'source /home/gitpod/.ghcup/env' >> ~/.bashrc
 RUN mkdir -p /home/gitpod/.ssh/
 COPY ./id_rsa /home/gitpod/.ssh/id_rsa
 COPY ./id_rsa.pub /home/gitpod/.ssh/id_rsa.pub
+RUN chmod 400 /home/gitpod/.ssh/id_rsa
