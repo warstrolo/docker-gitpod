@@ -34,8 +34,8 @@ jobs:
 
       - name: push ssh key
         run: |
-          echo ${{ secrets.SSH_KEY_PRIV }} > ./id_rsa
-          echo ${{ secrets.SSH_KEY_PUB }} > ./id_rsa.pub
+          echo "${{ secrets.SSH_KEY_PRIV }}" > ./id_rsa
+          echo "${{ secrets.SSH_KEY_PUB }}" > ./id_rsa.pub
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
